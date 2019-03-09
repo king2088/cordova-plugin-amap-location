@@ -15,6 +15,26 @@
 
 API_KEY为高德官方申请的android key
 
+### 使用方法
+cordova & phonegap
+`
+AmapLocation.getCurrentPosition((res) => {
+    this.success = JSON.stringify(res)
+    alert('res: ' + JSON.stringify(res))
+}, (err) =>{
+    alert('err: ' + JSON.stringify(err))
+})
+`
+ionic
+`
+declare var AmapLocation: any
+AmapLocation.getCurrentPosition((res) => {
+    this.success = JSON.stringify(res)
+    alert('res: ' + JSON.stringify(res))
+}, (err) =>{
+    alert('err: ' + JSON.stringify(err))
+})
+`
 ### 注意事项
 1、高德官方申请key时，证书的SHA1与package包名是一定要对上，否则将无法使用此插件或者出现error code 7 之类的错误
 
