@@ -6,27 +6,28 @@
 
 ### 插件安装
   cordova & phonegap cmd
-  
+
   `cordova plugin add https://github.com/king2088/cordova-plugin-amap-location-android.git --variable API_KEY="46461e321733f25c"`
-  
+
   ionic cmd
-  
+
   `ionic cordova plugin add https://github.com/king2088/cordova-plugin-amap-location-android.git --variable API_KEY="46461e321733f25c"`
 
 API_KEY为高德官方申请的android key
 
 ### 使用方法
 cordova & phonegap
-`
+```
 AmapLocation.getCurrentPosition((res) => {
     this.success = JSON.stringify(res)
     alert('res: ' + JSON.stringify(res))
 }, (err) =>{
     alert('err: ' + JSON.stringify(err))
 })
-`
+```
+
 ionic
-`
+```
 declare var AmapLocation: any
 AmapLocation.getCurrentPosition((res) => {
     this.success = JSON.stringify(res)
@@ -34,7 +35,8 @@ AmapLocation.getCurrentPosition((res) => {
 }, (err) =>{
     alert('err: ' + JSON.stringify(err))
 })
-`
+```
+
 ### 注意事项
 1、高德官方申请key时，证书的SHA1与package包名是一定要对上，否则将无法使用此插件或者出现error code 7 之类的错误
 
